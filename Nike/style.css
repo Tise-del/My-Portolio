@@ -1,0 +1,198 @@
+@font-face {
+    font-family: Cormorant_Garamond ;
+    src: url(./font/Cormorant_Garamond.zip);
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0d0d0d;
+  font-family: Cormorant_Garamond;
+  color: #fff;
+}
+
+.page {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 56px;
+  background: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.sidebar-text {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  letter-spacing: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #999;
+}
+
+/* Main */
+.main {
+  flex: 1;
+  padding: 32px 60px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+.swoosh {
+  width: 32px;
+  height: 32px;
+  fill: #fff;
+}
+
+.nav-links {
+  display: flex;
+  gap: 40px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.nav-links a:hover {
+  color: #f5c518;
+}
+
+/* Hero */
+.hero {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.hero-text {
+  max-width: 460px;
+}
+
+.title {
+  font-family: Cormorant_Garamond ;
+  font-size: 92px;
+  letter-spacing: 2px;
+  line-height: 0.9;
+  margin-bottom: 14px;
+}
+
+.subtitle {
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  color: #f0f0f0;
+}
+
+.price {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.description {
+  font-size: 12px;
+  line-height: 1.9;
+  color: #999;
+  font-style: italic;
+  margin-bottom: 34px;
+  max-width: 400px;
+}
+
+.cta {
+  background: #2b2b2b;
+  color: #fff;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.cta:hover {
+  background: #3d3d3d;
+}
+
+/* Hero image */
+.hero-image {
+  position: relative;
+  width: 420px;
+  height: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.glow-circle {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #2a2a2a 0%, #151515 80%);
+}
+
+/* Empty slot for your own image */
+.image-slot {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+
+.image-slot img {
+  width: 100vh;
+  height: 100vh;
+  padding-bottom: 200px;
+  /* object-fit: contain; */
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .hero-text {
+    max-width: 100%;
+  }
+  .title {
+    font-size: 64px;
+  }
+  .main {
+    padding: 24px;
+  }
+  .nav-links {
+    gap: 20px;
+  }
+}
